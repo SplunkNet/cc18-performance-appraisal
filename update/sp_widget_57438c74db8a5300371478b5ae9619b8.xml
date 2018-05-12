@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+    c.reviewee = '';
+    
+    $scope.$on("review.selected",
+        function(evt, sys_id, name) {
+          console.log("Recieved event for " + sys_id);
+          c.reviewee=name;
+            c.data.review_task = sys_id;
+            $scope.server.update().then( function() {
+							$scope.refreshOptions()
+						}
+																			 );
+        }                
+    );
+
+    $scope.sliderOptions = function(sys_id) {
+        console.log("In slider Options "+ sys_id);
+    }
+
+    $scope.slider = {
+        options: {
+                floor: 0,
+                ceil: 5,
+                onEnd: function() {
+                    $scope.submitQuestions();
+                }
+            }
+        }
+	
+		$scope.createCallback = function(sys_id) {
+			return function(){$scope.submitQuestion(sys_id)};
+		};
+    
+		$scope.refreshOptions = function() {
+			console.log("In refresh options");
+			console.log("question_ids: " + c.data.question_ids);
+	   if(c.data.question_ids) {
+			 for (var i=0; i < c.data.question_ids.length; i++) {
+        var sys_id = c.data.question_ids[i];
+				 var callback = $scope.createCallback(sys_id);
+				 console.log("Setting up options for "+ i +" " +sys_id);
+        $scope.slider.options[sys_id] = {
+                floor: 0,
+                ceil: 5,
+                onEnd: callback,
+								boundPointerLabels: false
+            }
+			 }
+		 }
+		}
+    
+   $scope.submitReview = function() {
+     console.log("in submitReview at "+ new Date().toUTCString());
+	   console.log("Finalizing review");
+     c.data.final = true;
+     c.server.update();
+   }
+				
+        $scope.submitQuestions = function() {
+            var questions = [];
+            for (var i=0; i < c.data.question_ids.length; i++) {
+                var sys_id = c.data.question_ids[i];
+                console.log("in submitQuestions at "+ new Date().toUTCString());
+
+                var question = {
+                    'sys_id': sys_id,
+                    'score': c.data.questions[sys_id].score,
+                    'comment': c.data.questions[sys_id].comment                    
+                };
+								console.log("Finalizing review");
+                console.log("Pushing " + sys_id + " " + JSON.stringify(question)+ " at "+ new Date().toUTCString());                 
+                questions.push(question);
+            }
+								c.data.final = true;
+                c.data.questions = questions;
+                c.server.update();
+        }				
+
+			$scope.submitQuestion = function(sys_id) {
+			  var questions = [];
+				console.log("in submitQuestion for " + sys_id+" at "+ new Date().toUTCString());
+
+				var question = {
+					'sys_id': sys_id,
+					'score': c.data.questions[sys_id].score,
+					'comment': c.data.questions[sys_id].comment					
+				};
+				console.log("Pushing " + sys_id + " " + JSON.stringify(question)+ " at "+ new Date().toUTCString());				 
+				c.data.question = question;
+				c.server.update();
+		}
+				
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.review-title {
+  font-size: large
+}
+
+input {
+  border: 1px solid #ffffff;
+}
+
+
+input.empty {
+  background-color: lightgrey
+}
+
+input.empty.required {
+  background-color: pink;
+}
+
+
+input.filled {
+  background-color: white;
+}
+
+
+li {
+  border: 2px solid #cccccc;
+  padding: 5px;
+  text-decoration: none;
+  margin: 10px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Test - Record Appraisal</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	if (input) {
+		
+		if (input.final) {
+			var reviewTaskGR = new GlideRecord('x_snc_pas1_review_task');
+			reviewTaskGR.get(input.review_task);
+			reviewTaskGR.setValue('state', 'completed');
+			reviewTaskGR.update();
+		}
+		
+		if (input.questions){
+			for (i=0; i < input.questions.length; i++) {
+				var input_question = input.questions[i];
+				var gr = new GlideRecord('x_snc_pas1_review_question');
+				gr.get(input_question.sys_id);
+				gr.setValue('score', input_question.score);
+				gr.setValue('comment', input_question.comment);
+				gr.update();
+			}
+		}
+		if (input.question){
+				var gr = new GlideRecord('x_snc_pas1_review_question');
+				gr.get(input.question.sys_id);
+				gr.setValue('score', input.question.score);
+				gr.setValue('comment', input.question.comment);
+				gr.update();
+			}
+
+
+		if (input.review_task) {
+			var review_task = input.review_task;
+			//gs.addInfoMessage(review_task);
+			var questionGr = new GlideRecord('x_snc_pas1_review_question');
+			questionGr.addQuery('review_task', review_task);
+			questionGr.query();
+			questionGr.orderBy('order');
+			
+			data.review_task = review_task;
+			data.questions = {};
+			data.question_ids = []
+
+			while (questionGr.next()) {
+				var question = {};
+				question.text = questionGr.text.getDisplayValue();
+				question.score = questionGr.score.getDisplayValue();
+				question.comment = questionGr.comment.getDisplayValue();
+				var sys_id = questionGr.getUniqueValue();
+				data.questions[sys_id] = question;
+				data.question_ids.push(sys_id)
+			}
+		}
+		
+		
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dave.slusher</sys_created_by>
+        <sys_created_on>2018-05-10 16:40:43</sys_created_on>
+        <sys_id>57438c74db8a5300371478b5ae9619b8</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Test - Record Appraisal</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sp_widget_57438c74db8a5300371478b5ae9619b8</sys_update_name>
+        <sys_updated_by>dave.slusher</sys_updated_by>
+        <sys_updated_on>2018-05-10 18:22:17</sys_updated_on>
+        <template><![CDATA[<div> 
+  <ul ng-if="c.reviewee">
+   <li ng-repeat="sys_id  in data.question_ids">{{data.questions[sys_id].text}}
+     <rzslider rz-slider-model="data.questions[sys_id].score" 
+               rz-slider-options="slider.options[sys_id]"></rzslider>
+     <input text ng-model="data.questions[sys_id].comment" 
+            ng-model-options='{ debounce: 1000 }'
+            ng-class="{empty : data.questions[sys_id].comment=='', filled : data.questions[sys_id].comment!='', required: data.questions[sys_id].score<=1||data.questions[sys_id].score==5}"
+            ng-change="submitQuestion(sys_id)" />
+    </li>
+  </ul>
+  <button ng-click="submitReview()">
+    Submit review
+  </button>
+</div>]]></template>
+    </sp_widget>
+</record_update>

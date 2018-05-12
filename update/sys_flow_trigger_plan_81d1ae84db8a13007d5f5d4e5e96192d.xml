@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_flow_trigger_plan">
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan/>
+        <plan_id>6d41e684db8a13007d5f5d4e5e961964</plan_id>
+        <snapshot>70d1ae84db8a13007d5f5d4e5e961900</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:37</sys_created_on>
+        <sys_id>81d1ae84db8a13007d5f5d4e5e96192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>41d1ae84db8a13007d5f5d4e5e96192b</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_flow_trigger_plan_81d1ae84db8a13007d5f5d4e5e96192d</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:37</sys_updated_on>
+        <trigger display_value="">41d1ae84db8a13007d5f5d4e5e96192b</trigger>
+    </sys_flow_trigger_plan>
+</record_update>

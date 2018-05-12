@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow_block">
+    <sys_hub_flow_block action="INSERT_OR_UPDATE">
+        <label_cache/>
+        <name/>
+        <sys_class_name>sys_hub_flow_block</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>3bc16e84db8a13007d5f5d4e5e96196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_hub_flow_block_3bc16e84db8a13007d5f5d4e5e96196e</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+    </sys_hub_flow_block>
+</record_update>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_instance">
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Records">ca07ee090b30030085c083eb37673afc</action_type>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="In progress review">6d41e684db8a13007d5f5d4e5e961964</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>3fc16e84db8a13007d5f5d4e5e961961</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_hub_action_instance_3fc16e84db8a13007d5f5d4e5e961961</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:36</sys_updated_on>
+        <ui_id>ad13f02e-5f80-4e30-98f7-8c4d26418898</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3fc16e84db8a13007d5f5d4e5e961961"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3fc16e84db8a13007d5f5d4e5e961961</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>33c16e84db8a13007d5f5d4e5e96197b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <value>x_snc_pas1_review_task</value>
+        <variable display_value="">8a07ee090b30030085c083eb37673aff</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>3fc16e84db8a13007d5f5d4e5e961961</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>3bc16e84db8a13007d5f5d4e5e961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <value>x_snc_pas1_review_task</value>
+        <variable display_value="">3807ee090b30030085c083eb37673a08</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3fc16e84db8a13007d5f5d4e5e961961"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>3fc16e84db8a13007d5f5d4e5e961961</id>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>7fc16e84db8a13007d5f5d4e5e961964</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d1c56ec50b30030085c083eb37673a50</table>
+        <value>review={{Updated_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>3fc16e84db8a13007d5f5d4e5e961961</id>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>fbc16e84db8a13007d5f5d4e5e96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ca07ee090b30030085c083eb37673afc</table>
+        <value>review={{Updated_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>3fc16e84db8a13007d5f5d4e5e961961</id>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>b7c16e84db8a13007d5f5d4e5e961965</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d1c56ec50b30030085c083eb37673a50</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>3fc16e84db8a13007d5f5d4e5e961961</id>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-05-08 20:17:32</sys_created_on>
+        <sys_id>bfc16e84db8a13007d5f5d4e5e96197a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-05-08 20:17:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ca07ee090b30030085c083eb37673afc</table>
+        <value/>
+    </sys_element_mapping>
+</record_update>

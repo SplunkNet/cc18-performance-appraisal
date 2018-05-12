@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Performance Appraisal History" max_length="40" name="x_snc_pas1_performance_appraisal_history" type="collection">
+        <element label="Current Score" max_length="40" name="current_score" type="string"/>
+        <element label="Previous Score" max_length="40" name="previous_score" type="string"/>
+        <element label="Survey Date" max_length="40" name="survey_date" type="glide_date"/>
+        <element label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

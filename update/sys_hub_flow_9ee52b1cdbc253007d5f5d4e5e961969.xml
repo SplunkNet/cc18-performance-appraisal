@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <label_cache>[{"name":"a09f4ccc-d4f6-416f-8f76-25b6b032700f.return_data","label":"1➛return_data","type":"string","base_type":"string"},{"name":"Created_1.current","label":"Trigger➛Performance Appraisal History Record","reference":"x_snc_pas1_performance_appraisal_history","reference_display":"Performance Appraisal History","type":"reference","base_type":"reference"},{"name":"Created_1.current.survey_date","label":"Trigger➛Performance Appraisal History Record➛Survey Date","reference":"","reference_display":"Survey Date","type":"glide_date","base_type":"glide_date","parent_table_name":"x_snc_pas1_performance_appraisal_history","column_name":"survey_date"},{"name":"Created_1.current.current_score","label":"Trigger➛Performance Appraisal History Record➛Current Score","reference":"","reference_display":"Current Score","type":"string","base_type":"string","parent_table_name":"x_snc_pas1_performance_appraisal_history","column_name":"current_score"},{"name":"Created_1.current.user.employee_number","label":"Trigger➛Performance Appraisal History Record➛User➛Employee number","reference":"","reference_display":"Employee number","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"employee_number"}]</label_cache>
+        <latest_snapshot display_value="RestAssured HR Sync">12272b5cdbc253007d5f5d4e5e961908</latest_snapshot>
+        <name>RestAssured HR Sync</name>
+        <remote_trigger_id>aa272b5cdbc253007d5f5d4e5e96193b</remote_trigger_id>
+        <show_draft_actions>false</show_draft_actions>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:53:33</sys_created_on>
+        <sys_id>9ee52b1cdbc253007d5f5d4e5e961969</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RestAssured HR Sync</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_hub_flow_9ee52b1cdbc253007d5f5d4e5e961969</sys_update_name>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:59:02</sys_updated_on>
+    </sys_hub_flow>
+</record_update>

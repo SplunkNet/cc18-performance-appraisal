@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <annotation/>
+        <category/>
+        <description/>
+        <label_cache>[{"name":"{{action.ah_key}}","label":"action➛Key","type":"action","ref":""},{"name":"{{action.ah_secret}}","label":"action➛Secret","type":"action","ref":""},{"name":"{{action.ah_mode}}","label":"action➛Mode","type":"action","ref":""},{"name":"{{action.ah_employee_id}}","label":"action➛Employee ID","type":"action","ref":""},{"name":"{{action.ah_score}}","label":"action➛Score","type":"action","ref":""},{"name":"{{action.ah_survey_date}}","label":"action➛Survey Date","type":"action","ref":""},{"name":"{{step[8682bc67-e5b9-4fe6-9210-1c2293b1d5fe].response_body}}","label":"step➛REST step➛Response Body","type":"step","ref":""}]</label_cache>
+        <latest_snapshot display_value="RestAssured HR Update Score API">f8c56b1cdbc253007d5f5d4e5e9619c9</latest_snapshot>
+        <name>RestAssured HR Update Score API</name>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:48:03</sys_created_on>
+        <sys_id>e9a4efd8dbc253007d5f5d4e5e9619da</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>RestAssured HR Update Score API</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_e9a4efd8dbc253007d5f5d4e5e9619da</sys_update_name>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <system_level>false</system_level>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=e9a4efd8dbc253007d5f5d4e5e9619da"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e9a4efd8dbc253007d5f5d4e5e9619da"/>
+    <sys_element_mapping action="delete_multiple" query="id=e9a4efd8dbc253007d5f5d4e5e9619da"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>return_data</field>
+        <id>e9a4efd8dbc253007d5f5d4e5e9619da</id>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:46</sys_created_on>
+        <sys_id>7eb56b1cdbc253007d5f5d4e5e96196a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:46</sys_updated_on>
+        <table>var__m_sys_hub_action_output_e9a4efd8dbc253007d5f5d4e5e9619da</table>
+        <value>{{step[8682bc67-e5b9-4fe6-9210-1c2293b1d5fe].response_body}}</value>
+    </sys_element_mapping>
+</record_update>

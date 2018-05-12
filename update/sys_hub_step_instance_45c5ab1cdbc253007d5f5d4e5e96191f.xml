@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_step_instance">
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="RestAssured HR Update Score API">f8c56b1cdbc253007d5f5d4e5e9619c9</action>
+        <cid>8682bc67-e5b9-4fe6-9210-1c2293b1d5fe</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>REST step</label>
+        <order>1</order>
+        <outputs/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>45c5ab1cdbc253007d5f5d4e5e96191f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>REST step</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sys_hub_step_instance_45c5ab1cdbc253007d5f5d4e5e96191f</sys_update_name>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=45c5ab1cdbc253007d5f5d4e5e96191f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>45c5ab1cdbc253007d5f5d4e5e96191f</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>11c5ab1cdbc253007d5f5d4e5e961929</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>45c5ab1cdbc253007d5f5d4e5e96191f</document_key>
+        <order>35</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>5dc5ab1cdbc253007d5f5d4e5e961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <value>http://spyndle.com/apps/restassured/api/api.php</value>
+        <variable display_value="">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>45c5ab1cdbc253007d5f5d4e5e96191f</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>99c5ab1cdbc253007d5f5d4e5e961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <value>{}</value>
+        <variable display_value="">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=45c5ab1cdbc253007d5f5d4e5e96191f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>base_url</field>
+        <id>45c5ab1cdbc253007d5f5d4e5e96191f</id>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>55c5ab1cdbc253007d5f5d4e5e961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>45c5ab1cdbc253007d5f5d4e5e96191f</id>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>19c5ab1cdbc253007d5f5d4e5e961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>query_params</field>
+        <id>45c5ab1cdbc253007d5f5d4e5e96191f</id>
+        <sys_created_by>kreg.steppe</sys_created_by>
+        <sys_created_on>2018-05-09 19:52:56</sys_created_on>
+        <sys_id>91c5ab1cdbc253007d5f5d4e5e961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kreg.steppe</sys_updated_by>
+        <sys_updated_on>2018-05-09 19:52:56</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
+        <value>{"mode":"{{action.ah_mode}}","score":"{{action.ah_score}}","employee_id":"{{action.ah_employee_id}}","survey_date":"{{action.ah_survey_date}}","secret":"{{action.ah_secret}}","key":"{{action.ah_key}}"}</value>
+    </sys_element_mapping>
+</record_update>

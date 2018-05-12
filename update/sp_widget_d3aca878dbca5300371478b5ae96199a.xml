@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($rootScope, $scope,spUtil) {
+  /* widget controller */
+  var c = this;
+	
+	spUtil.recordWatch($scope, 'x_snc_pas1_review_task');
+
+	
+	c.selectReview = function(sys_id, name) {
+		console.log(sys_id);
+		$rootScope.$broadcast("review.selected", sys_id, name);
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+#buttons li {
+  float: left;
+  list-style: none;
+  text-align: center;
+  background-color: #4b8169;
+  margin-right: 30px;
+  padding: 20px;
+  border-radius: 25px;
+  width: 200px;
+}
+
+#buttons li {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: x-large
+  display: block;
+}
+
+#buttons li:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: xx-large;
+  background-color: #4b8169;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>appraisal_list</id>
+        <internal>false</internal>
+        <link/>
+        <name>Appraisal List</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	data.review_tasks = [];
+	var gr = new GlideRecord('x_snc_pas1_review_task');
+	gr.addQuery('state', '!=', 'completed');
+	gr.addQuery('assigned_to', gs.getUserID());
+	
+	gr.query();
+	while (gr.next() ) {
+		var review_task = {};
+		var reviewGr = new GlideRecord('x_snc_pas1_review');
+		review_task.review = gr.getValue('review');
+		reviewGr.get(review_task.review);
+		review_task.employee = reviewGr.employee.getDisplayValue();		
+		
+		review_task.state = gr.state.getDisplayValue();		
+		review_task.sys_id = gr.getUniqueValue();
+		review_task.number = gr.number.getDisplayValue();
+
+		data.review_tasks.push(review_task);
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dave.slusher</sys_created_by>
+        <sys_created_on>2018-05-10 19:41:12</sys_created_on>
+        <sys_id>d3aca878dbca5300371478b5ae96199a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Appraisal List</sys_name>
+        <sys_package display_value="Performance Appraisal" source="x_snc_pas1">dcdad240db8a13007d5f5d4e5e961937</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Performance Appraisal">dcdad240db8a13007d5f5d4e5e961937</sys_scope>
+        <sys_update_name>sp_widget_d3aca878dbca5300371478b5ae96199a</sys_update_name>
+        <sys_updated_by>dave.slusher</sys_updated_by>
+        <sys_updated_on>2018-05-10 20:11:59</sys_updated_on>
+        <template><![CDATA[<div>
+<ul id="buttons">
+<li ng-repeat="task in data.review_tasks"  ng-class="{task.state=='Overdue':'overdue'; buttons}" ng-click="c.selectReview(task.sys_id, task.employee)" sys_id="{{task.sys_id}}">
+  Review for {{task.employee}}: {{task.state}}
+  </li>  
+</ul>
+</div>
+<div style="clear: both;"></div>]]></template>
+    </sp_widget>
+</record_update>
